@@ -1,3 +1,26 @@
+# =================================================================================================
+#                                  All Rights Reserved.
+# =================================================================================================
+# File description:
+#       .gitignore
+#
+# =================================================================================================
+#    Date      Name                    Description of Change
+# 14-Nov-2021  Wayne Shih              Initial create from GitHub
+# 14-Nov-2021  Wayne Shih              Ignore vagrant-related files and PyCharm-related config
+# $HISTORY$
+# =================================================================================================
+
+# <Wayne Shih> 14-Nov-2021
+# vagrant-related files
+*.box
+.vagrant
+Vagrantfile
+
+# <Wayne Shih> 14-Nov-2021
+# PyCharm-related config
+.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
