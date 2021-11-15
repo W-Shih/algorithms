@@ -10,6 +10,7 @@
 # =================================================================================================
 #    Date      Name                    Description of Change
 # 14-Nov-2021  Wayne Shih              Copy from google to initial create
+# 14-Nov-2021  Wayne Shih              Update some configs as own needs
 # $HISTORY$
 # =================================================================================================
 
@@ -17,7 +18,7 @@
 [MASTER]
 
 # Files or directories to be skipped. They should be base names, not paths.
-ignore=third_party
+ignore=third_party,
 
 # Files or directories matching the regex patterns are skipped. The regex
 # matches against base names, not paths.
@@ -92,14 +93,17 @@ disable=abstract-method,
         inconsistent-return-statements,
         input-builtin,
         intern-builtin,
+        invalid-name,
         invalid-str-codec,
         locally-disabled,
         long-builtin,
         long-suffix,
         map-builtin-not-iterating,
-        misplaced-comparison-constant,
-        missing-function-docstring,
         metaclass-assignment,
+        misplaced-comparison-constant,
+        missing-class-docstring,
+        missing-function-docstring,
+        missing-module-docstring,
         next-method-called,
         next-method-defined,
         no-absolute-import,
@@ -274,7 +278,7 @@ generated-members=
 [FORMAT]
 
 # Maximum number of characters on a single line.
-max-line-length=80
+max-line-length=100
 
 # TODO(https://github.com/PyCQA/pylint/issues/3352): Direct pylint to exempt
 # lines made too long by directives to pytype.
@@ -301,7 +305,7 @@ max-module-lines=99999
 # spaces.  Google's externaly-published style guide says 4, consistent with
 # PEP 8.  Here, we use 2 spaces, for conformity with many open-sourced Google
 # projects (like TensorFlow).
-indent-string='  '
+indent-string='    '
 
 # Number of spaces of indent required inside a hanging  or continued line.
 indent-after-paren=4
