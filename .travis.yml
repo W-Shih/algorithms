@@ -7,6 +7,7 @@
 # =================================================================================================
 #    Date      Name                    Description of Change
 # 14-Nov-2021  Wayne Shih              Initial create
+# 14-Nov-2021  Wayne Shih              Add codacy
 # $HISTORY$
 # =================================================================================================
 
@@ -26,6 +27,7 @@ install:
 # command to set up environment
 before_script:
   - sudo bash ./provision.sh
+  - export CODACY_PROJECT_TOKEN=bf5bcc6514974a54b8ec54cfe892b25e
 
 # command to run tests and pylint
 script:
@@ -35,3 +37,4 @@ script:
 # Push the results back to codecov
 after_success:
   - codecov
+  - bash <(curl -Lsk https://coverage.codacy.com/get.sh) report -r coverage.xml
