@@ -28,21 +28,11 @@ class Solution:
 
         l, r = 0, len(chars) - 1
         while l <= r:
-            while l <= r and self._is_char_lower(chars[l]):
+            while l <= r and chars[l].islower():
                 l += 1
-            while l <= r and self._is_char_upper(chars[r]):
+            while l <= r and chars[r].isupper():
                 r -= 1
 
             if l <= r:
                 chars[l], chars[r] = chars[r], chars[l]
                 l, r = l + 1, r - 1
-
-    def _is_char_lower(self, char):
-        if 'a' <= char <= 'z':
-            return True
-        return False
-
-    def _is_char_upper(self, char):
-        if 'A' <= char <= 'Z':
-            return True
-        return False
