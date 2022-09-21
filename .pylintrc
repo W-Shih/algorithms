@@ -11,6 +11,7 @@
 #    Date      Name                    Description of Change
 # 14-Nov-2021  Wayne Shih              Copy from google to initial create
 # 14-Nov-2021  Wayne Shih              Update some configs as own needs
+# 21-Sep-2022  Wayne Shih              Disable django-not-configured
 # $HISTORY$
 # =================================================================================================
 
@@ -76,6 +77,7 @@ disable=abstract-method,
         coerce-method,
         delslice-method,
         div-method,
+        django-not-configured,
         duplicate-code,
         eq-without-hash,
         execfile-builtin,
